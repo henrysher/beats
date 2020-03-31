@@ -256,8 +256,7 @@ func (d *defaultTemplateBuilder) roleTemplate(function installer, name string) *
 					"Effect": "Allow",
 					"Principal": map[string]interface{}{
 						"Service": cloudformation.Join("", []string{
-							"lambda.",
-							cloudformation.Ref("AWS::URLSuffix"),
+							"lambda.amazonaws.com"
 						}),
 					},
 				},
